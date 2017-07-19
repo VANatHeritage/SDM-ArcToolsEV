@@ -1,4 +1,4 @@
-# -------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------
 # BatchDownloadZipFiles.py
 # Version:  Python 2.7.5
 # Creation Date: 2015-07-14
@@ -12,8 +12,7 @@
 #     The file set is determined by a list in a user-provided table.
 #
 # Usage Tips:
-# Recommended default parameters to attach to tools in ArcGIS toolbox are below.  This single script
-# can be added to multiple script tools with different defaults.
+# Recommended default parameters to attach to tools in ArcGIS toolbox are below.  This single script can be added to multiple script tools with different defaults.
 #
 # TIGER/Line Roads data
 #     in_fld = 'GEOID' (5-digit code for state/county)
@@ -38,7 +37,7 @@
 #     suf = '_ArcGrid.zip' (for ArcGrid format)
 #     ftpHOST = 'rockyftp.cr.usgs.gov'
 #     ftpDIR = 'vdelivery/Datasets/Staged/Elevation/1/ArcGrid' (for 1 arc-second data)
-# -------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------
 
 # Import required modules
 import ftplib # needed to connect to the FTP server and download files
@@ -130,6 +129,7 @@ for item in ProcList:
 timestamp = datetime.now().strftime(FORMAT)
 Log.write("\nProcess logging ended %s" % timestamp)   
 Log.close()
+
 
 
 
