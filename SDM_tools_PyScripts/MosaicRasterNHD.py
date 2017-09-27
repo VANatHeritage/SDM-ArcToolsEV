@@ -23,12 +23,12 @@ import gc # garbage collection
 from datetime import datetime # for time-stamping
 
 # Script arguments to be input by user
-inGDB = arcpy.GetParameterAsText(0) # Input GDBs containing the raster strips to mosaic
+inGDB = arcpy.GetParameterAsText(0) # Input GDBs containing the rasters to mosaic
 inSnap = arcpy.GetParameterAsText(1) # Snap raster to set cell size and alignment
 mosaicName = arcpy.GetParameterAsText(2) # Name for output mosaic
 scratchGDB = arcpy.GetParameterAsText(3) # Scratch GDB to store the mosaic dataset
 outGDB = arcpy.GetParameterAsText(4) # Output GDB to store the final raster dataset
-procLog = arcpy.GetParameterAsText(5) #Log to store data on the mosaicking progress
+procLog = arcpy.GetParameterAsText(5) #Log to store information on the mosaicking progress
 
 # Open processing log.
 Log = open(procLog, 'w+') 

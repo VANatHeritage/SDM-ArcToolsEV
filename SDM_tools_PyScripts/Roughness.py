@@ -1,4 +1,4 @@
-# -------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------
 # Roughness.py
 # Version:  Python 2.7.5 / ArcGIS 10.2.2
 # Creation Date: 2015-07-25
@@ -6,16 +6,10 @@
 # Creator:  Kirsten R. Hazler
 #
 # Summary:
-#     Uses an input Digital Elevation Model (DEM) to derive terrain roughness indices at three different scales.
-# "Roughness" is defined as the standard deviation of elevation values within a specified neighborhood.   
-# Scale is determined by the neighborhood radii (in units of raster cells) input by the user. 
-# Each neighborhood is defined as a circle with radius r, unless r = 1, in which case a square 3x3 
-# neighborhood is used.
+#     Uses an input Digital Elevation Model (DEM) to derive terrain roughness indices at three different scales. "Roughness" is defined as the standard deviation of elevation values within a specified neighborhood.  Scale is determined by the neighborhood radii (in units of raster cells) input by the user. Each neighborhood is defined as a circle with radius r, unless r = 1, in which case a square 3x3 neighborhood is used.
 
-# Processing is done by USGS quads or by other units defined by a polygon feature class. Thus, the output
-# for each defined scale (neighborhood) is a set of rasters which will need to be mosaicked together later.
-
-# -------------------------------------------------------------------------------------------------------
+# Processing is done by USGS quads or by other units defined by a polygon feature class. Thus, the output for each defined scale (neighborhood) is a set of rasters which will need to be mosaicked together later.
+# -----------------------------------------------------------------------------------------
 
 # Import required modules
 import arcpy
@@ -145,6 +139,14 @@ if FailList:
 timestamp = datetime.now().strftime(FORMAT)
 Log.write("\nProcess logging ended %s" % timestamp)   
 Log.close()
+
+
+
+
+
+
+
+
 
 
 

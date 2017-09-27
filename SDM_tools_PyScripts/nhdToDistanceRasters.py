@@ -4,14 +4,11 @@
 # Creation Date: 2017-03-29
 # Last Edit: 2017-04-03
 # Creator: Roy Gilb
+# Cosmetic Edits: Kirsten Hazler (2017-08-24)
 #
-# Summary: For a directory containing sets of National Hydrography Dataset geodatabases, merges all NHDArea and NHDWaterbody features into a large regional feature class, 
-#          projects the resulting NHD polygons to Albers, subsets the projected polygons into 3 classes (stream/river, lake/pond <= 1 ha, and lake/pond > 1 ha), 
-#          rasterizes the subset polygons to source rasters, and then calculates the euclidean distance for each of the three source rasters. The output rasters should be 
-#          clipped to the SDM Study Region.
-#   
+# Summary: For a directory containing sets of National Hydrography Dataset geodatabases, merges all NHDArea and NHDWaterbody features into a large regional feature class, projects the resulting NHD polygons to Albers, subsets the projected polygons into 3 classes (stream/river, lake/pond <= 1 ha, and lake/pond > 1 ha), rasterizes the subset polygons to source rasters, and then calculates the euclidean distance for each of the three source rasters. The output rasters should be clipped to the SDM Study Region.
 #
-## Note: Some lines of codetaken and edited from nhdToRaster.py script.
+## Note: Some lines of code taken and edited from nhdToRaster.py script.
 # ----------------------------------------------------------------------------------------
 
 # Import required modules
@@ -144,6 +141,10 @@ arcpy.gp.EucDistance_sa(outLake, distLake, "", inSnap, "")
    
       
 #Delete scratch vars?
+
+
+
+
 
 
 

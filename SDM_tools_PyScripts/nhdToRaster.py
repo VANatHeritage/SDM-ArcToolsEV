@@ -6,7 +6,7 @@
 # Creator:  Kirsten R. Hazler/Roy Gilb
 #
 # Summary:
-# For a set of National Hydrography Dataset geodatabases, converts NHDArea, NHDWaterbody, and NHDFlowline features to rasters based on a table of FCodes.  Creates a final output raster classified as follows:
+# For a set of National Hydrography Dataset geodatabases, converts NHDArea, NHDWaterbody, and NHDFlowline features to rasters based on a table of FCodes.  Creates final output rasters classified as follows:
 # 1 = streams (inland linear features)
 # 2 = inland lakes and rivers (inland polygon features)
 # 3 = estuary
@@ -31,7 +31,7 @@ from datetime import datetime # for time-stamping
 
 # Script arguments to be input by user
 inGDB = arcpy.GetParameterAsText(0) # Input set of NHD geodatabases to process
-inFCodes = arcpy.GetParameterAsText(1) # Input table containing FCodes to include in burn
+inFCodes = arcpy.GetParameterAsText(1) # Input table containing FCodes to include in rasterization process
    # Default:  tb_nhdFCodes
 fldMarine = arcpy.GetParameterAsText(2) # Binary field; marine indicator
    # Default:  sdmMarine

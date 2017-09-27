@@ -62,11 +62,6 @@ for gdb in inGDB.split(';'):
 arcpy.AddMessage('Importing footprint geometry...')
 arcpy.ImportMosaicDatasetGeometry_management(solarMosaic, "FOOTPRINT", "Name", inFprints, joinFld)
 
-# Process: Calculate Statistics
-# This takes a long time and isn't actually necessary unless you want to view the mosaic dataset.
-# arcpy.AddMessage('Calculating mosaic statistics...')
-# arcpy.CalculateStatistics_management(solarMosaic, "", "", "", "", inFprints)
-
 # Process: Copy final output raster dataset
 try:
    arcpy.AddMessage('Exporting final raster dataset.  This may take awhile...')
@@ -82,6 +77,13 @@ Log.write('Processing finished %s.\n' % timeStamp)
 Log.write('Mosaic dataset stored here: %s.\n' % scratchGDB)
 Log.write('Final raster output is %s.\n' % rd )
 Log.close()
+
+
+
+
+
+
+
 
 
 
