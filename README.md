@@ -1,2 +1,2 @@
 # SDM-ArcToolsEV
-Toolbox and scripts used to produce environmental variables for SDM regional project
+ArcGIS toolbox and associated Python scripts used to produce topographic and hydrologic environmental variables for the SDM regional project (Florida to Maine).
